@@ -19,7 +19,6 @@ function App() {
         <Route path='/auth'>
           <AuthPage />
         </Route>
-       
         <Route path='/profile'>
        { authCtx.isLogged &&<UserProfile />}
        {!authCtx.isLogged && <Redirect to='/auth' />}
