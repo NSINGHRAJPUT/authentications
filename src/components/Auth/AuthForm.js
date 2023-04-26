@@ -67,6 +67,8 @@ const AuthForm = () => {
       })
       setIsSent(false)
     }
+    emailRef.current.value='';
+    passwordRef.current.value='';
   }
   return (
     <section className={classes.auth}>

@@ -27,7 +27,7 @@ const MainNavigation = () => {
             <Link to='/profile'>Profile</Link>
           </li>}
           {isLogged &&<li>
-            <button onClick={logoutHandler}>Logout</button>
+            <Link to='/auth'><button onClick={logoutHandler}>Logout</button></Link>
           </li>}
         </ul>
       </nav>

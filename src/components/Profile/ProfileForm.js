@@ -27,6 +27,7 @@ const ProfileForm = () => {
         })
       }
     })
+    passRef.current.value=''
   }
 
   return (
