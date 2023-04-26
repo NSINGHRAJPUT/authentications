@@ -12,15 +12,18 @@ export const AuthContextProvider = (props) =>{
     const [token, setToken] = useState(preToken)
     const isLogged = !!token;
 
-    const loggedIn = (token) =>{
-        setToken(token)
-        localStorage.setItem('token',token)
-    }
-
     const loggedOut = () =>{
         localStorage.removeItem('token')
         setToken(null)
     }
+
+    const loggedIn = (token) =>{
+        setToken(token)
+        localStorage.setItem('token',token)
+        
+        setTimeout(loggedOut,50000)
+    }
+
 
     const contextValue = {
         token: token,
